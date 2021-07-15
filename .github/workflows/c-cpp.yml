@@ -12,7 +12,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2, ccache
+    - uses: actions/checkout@v2
+    - name: TEMPORARY act workaround
+    - run: sudo apt install ccache
     - name: make
       run: make
     - name: make check
